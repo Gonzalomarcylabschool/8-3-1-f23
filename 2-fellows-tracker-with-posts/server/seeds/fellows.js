@@ -13,9 +13,10 @@ exports.seed = async function (knex) {
 
   // Use the knex query builder methods to insert fellow data
   await knex('fellows').insert([
-    { name: 'maya' },
-    { name: 'reuben' },
-    { name: 'ann' }
+    { name: 'Maya' },
+    { name: 'Reuben' },
+    { name: 'Gonzalo' },
+    { name: 'Ben'},
   ]);
 
   // insert the array of post data
@@ -23,6 +24,7 @@ exports.seed = async function (knex) {
   await knex('posts').insert([
     { post_content: `hello world i am maya`, fellow_id: 1 },
     { post_content: `hello world i am reuben`, fellow_id: 2 },
-    { post_content: `hello world i am ann`, fellow_id: 3 },
+    { post_content: `hello world i am gonzalo`, fellow_id: 3 },
+    { post_content: `hello world i am ben`, fellow_id: 4 },
   ])
 };

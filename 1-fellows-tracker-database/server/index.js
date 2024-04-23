@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
 
 // Instead of defining all of the controllers in this file, we've moved them to their own folder
 const {
@@ -60,5 +61,5 @@ app.get('*', (req, res, next) => {
 });
 
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`listening at http://localhost:${port}`));
